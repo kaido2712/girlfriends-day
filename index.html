@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Story ❤️</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Poppins:wght@300;400;500&display=swap"
+rel="stylesheet">
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:
+    linear-gradient(
+        180deg,
+        #fff0f5 0%,
+        #ffe4ec 30%,
+        #ffd6e7 60%,
+        #ffc1d6 100%
+    );
+
+    color:#8A4F6D;
+}
+.hero img{
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(0px);
+    }
+    50%{
+        transform:translateY(-10px);
+    }
+    100%{
+        transform:translateY(0px);
+    }
+}
+.hero h1{
+    margin-top:0;
+    margin-bottom:20px;
+    line-height:0.9;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:linear-gradient(
+        180deg,
+        #fff0f5,
+        #ffe4ec,
+        #ffd6e7
+    );
+}
+.hero img{
+    width:320px;
+    max-width:80vw;
+    border-radius:25px;
+    border:8px solid white;
+    box-shadow:0 15px 35px rgba(255,105,180,.2);
+    
+}
+
+.hero h1{
+    font-family:'Great Vibes',cursive;
+    font-size:7rem;
+    color:#ff5ba7;
+}
+
+.subtitle{
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.8rem;
+    color:#7a5164;
+    font-style:italic;
+}
+
+.love-btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 32px;
+    background:#ff69b4;
+    color:white;
+    text-decoration:none;
+    border-radius:50px;
+}
+
+.glow{
+    color:#ff7ac6;
+}
+
+.stars{
+    position:absolute;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+
+.star{
+    position:absolute;
+    width:3px;
+    height:3px;
+    background:white;
+    border-radius:50%;
+    animation:twinkle 2s infinite;
+}
+
+@keyframes twinkle{
+    50%{opacity:.2}
+}
+
+section{
+    padding:100px 10%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+    font-size:3rem;
+}
+
+.timeline{
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+}
+
+.timeline-card{
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(12px);
+    padding:25px;
+    border-radius:20px;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.photo{
+    background:white;
+    padding:12px;
+    border-radius:15px;
+    color:black;
+    transform:rotate(-2deg);
+    transition:.3s;
+}
+
+.photo:hover{
+    transform:scale(1.05) rotate(0deg);
+}
+
+.photo img{
+    width:100%;
+    border-radius:10px;
+}
+
+.photo p{
+    text-align:center;
+    margin-top:10px;
+}
+
+.reasons{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.reason{
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.1);
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+}
+#reason-card{
+    margin-top:30px;
+    width:min(700px,90%);
+    background:white;
+    border:3px solid #ffb6d5;
+    border-radius:25px;
+    padding:25px;
+    font-size:1.3rem;
+    color:#8A4F6D;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(255,105,180,.15);
+}
+
+.counter{
+    text-align:center;
+    font-size:4rem;
+    color:#ff7ac6;
+    margin:20px 0;
+}
+
+.letter{
+    max-width:900px;
+    margin:auto;
+    background:rgba(255,255,255,.08);
+    padding:40px;
+    border-radius:25px;
+    line-height:2;
+}
+
+.final{
+    text-align:center;
+    min-height:80vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+button{
+    margin-top:30px;
+    padding:15px 35px;
+    border:none;
+    border-radius:40px;
+    cursor:pointer;
+    font-size:1rem;
+    background:#ff4fa3;
+    color:white;
+}
+
+#surprise{
+    display:none;
+    margin-top:30px;
+    font-size:2rem;
+}
+
+.heart{
+    position:fixed;
+    font-size:24px;
+    animation:rise 5s linear forwards;
+}
+.final-title{
+    font-family:'Great Vibes',cursive;
+    font-size:5rem;
+    color:#FF4F9A;
+}
+
+.final-text{
+    font-size:1.5rem;
+    color:#8A4F6D;
+}
+@keyframes rise{
+    from{
+        transform:translateY(100vh);
+        opacity:1;
+    }
+    to{
+        transform:translateY(-100px);
+        opacity:0;
+    }
+}
+#love-jar{
+    text-align:center;
+}
+
+.jar-container{
+    max-width:700px;
+    margin:auto;
+}
+
+.jar{
+    font-size:8rem;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.jar:hover{
+    transform:scale(1.1) rotate(5deg);
+}
+.paper-heart{
+    position:absolute;
+    font-size:1.5rem;
+}
+
+.top-left{
+    top:10px;
+    left:15px;
+}
+
+.bottom-right{
+    bottom:10px;
+    right:15px;
+}
+#reason-card{
+    width:min(600px,90%);
+    min-height:180px;
+
+    margin:30px auto;
+    padding:35px;
+
+    background:#fffdf7;
+
+    border-radius:4px;
+
+    color:#6b4c5a;
+
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.7rem;
+    line-height:1.6;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.08),
+        0 2px 5px rgba(0,0,0,.05);
+
+    position:relative;
+
+    transform:rotate(-1deg);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+#thank-you-parents{
+    padding:120px 10%;
+    text-align:center;
+}
+
+.parents-subtitle{
+    font-family:'Great Vibes',cursive;
+    font-size:2rem;
+    color:#ff69b4;
+    margin-top:-20px;
+    margin-bottom:50px;
+}
+
+.parents-container{
+    max-width:1000px;
+    margin:auto;
+
+    background:rgba(255,255,255,.65);
+    backdrop-filter:blur(15px);
+
+    border-radius:30px;
+
+    padding:40px;
+
+    box-shadow:
+        0 15px 40px rgba(255,105,180,.15);
+}
+
+.parents-photo{
+    width:280px;
+    height:280px;
+    object-fit:cover;
+
+    border-radius:25px;
+
+    border:8px solid white;
+
+    box-shadow:
+        0 10px 25px rgba(255,105,180,.2);
+}
+
+.parents-letter{
+    max-width:700px;
+    margin:40px auto 0;
+
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.6rem;
+
+    color:#8A4F6D;
+    line-height:2;
+}
+
+.letter-opening{
+    font-family:'Great Vibes',cursive;
+    font-size:3rem;
+    color:#ff5ba7;
+}
+
+.letter-signature{
+    margin-top:30px;
+
+    font-family:'Great Vibes',cursive;
+    font-size:2.8rem;
+
+    color:#ff5ba7;
+}
+</style>
+</head>
+<body>
+
+<script>
+const reasons = [
+    "Your smile brightens my day 😊",
+    "You always know how to make me laugh 😂",
+    "You make every day better ❤️",
+    "You are my favorite person 💖",
+    "I love the way you care about me 🌸",
+    "You let me touch your tummy",
+    "You rest your head on my arm",
+    "Your warmth is comforting",
+    "Your hair",
+    "Your prettiest smile",
+    "Your juicy ass",
+    "You feed me",
+    "You hold my hand even though it's sweaty",
+    "You give me kisses",
+    "You let me braid your hair",
+    "You let me in your space even when you are overwhelmed",
+    "Your eyes",
+    "Your cutest texts",
+    "Your laugh",
+    "You go on dates with me",
+    "Because you taught me what genuine care feels like",
+    "Because you make me feel understood",
+    "Because you look adorable when you're sleepy",
+    "Because you send me the cutest photos",
+    "Because you make me feel understood",
+    "Because you are the best pillion",
+    "Because your voice instantly improves my mood",
+    "Because you're adorable when you're excited",
+    "Because you have a beautiful heart",
+    "Because you're strong",
+
+
+];
+
+function showReason(){
+
+    const random =
+    reasons[Math.floor(Math.random() * reasons.length)];
+
+    document.getElementById("reason-card").innerHTML =
+    random;
+
+    const heart = document.createElement("div");
+
+    heart.innerHTML = "💖";
+    heart.className = "floating-heart";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 2000);
+}
+</script>
+
+</body>
+</html>
+
+
+
+<div class="stars" id="stars"></div>
+
+<section class="hero">
+    <div class="hero-content">
+        <img src="photos/hero.jpg" alt="Our Photo">
+        <h1>      </h1>
+        <h1>Happy Girlfriend's Day</h1>
+
+        <p class="subtitle">
+            A little corner of the internet made only for you ❤️
+        </p>
+
+        <a href="#journey" class="love-btn">
+            Our Story ↓
+        </a>
+    </div>
+</section>
+<section>
+    <h2 class="section-title">Our Journey ✨</h2>
+
+    <div class="timeline">
+        <div class="timeline-card">
+            <h3>🌸 The Day We Met</h3>
+            <p>Of course I don’t remember the day we met ,But I am sooooooooooo glad we did meet .The fact that somehow we ended up being neighbors ,Somehow I managed to be friends with you ,It all sounds so unreal to me .You have helped me so much through all the ups and downs in my life even though clearly you have always had A lot on your plate ,I love you so much. Thank you for choosing me :)</p>
+        </div>
+
+        <div class="timeline-card">
+            <h3>☕ Favorite Date</h3>
+            <p>My Favourite Date was when we went to ABC That was the day when I knew you are the one for me ,We talked so much that day about so much random stuff I loved it ,You made me feel heard you made me feel like I am loved.</p>
+        </div>
+
+        <div class="timeline-card">
+            <h3>❤️ Today</h3>
+            <p>Still my favorite person.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2 class="section-title">Cute Moments 📸</h2>
+
+    <div class="gallery">
+        <div class="photo">
+            <img src="photos/p1.jpg">
+            <p>The First Time we went on a Date after January</p>
+        </div>
+
+        <div class="photo">
+            <img src="photos/p2.jpg">
+            <p>I love it when you smile</p>
+        </div>
+
+        <div class="photo">
+            <img src="photos/p3.jpg">
+            <p>But I love it even more when I am the one making you Smile</p>
+        </div>
+
+        <div class="photo">
+            <img src="photos/p4.jpg">
+            <p>Thank you for letting me be me</p>
+        </div>
+    </div>
+</section>
+
+
+<section>
+    <h2 class="section-title">Reasons I Love You 🥰</h2>
+
+    <div class="reasons">
+        <div class="reason">Your Smile 😊</div>
+        <div class="reason">Your Kindness 💕</div>
+        <div class="reason">Your Laugh 😂</div>
+        <div class="reason">Your Support ✨</div>
+        <div class="reason">Your Heart ❤️</div>
+        <div class="reason">Everything About You 🌹</div>
+    </div>
+</section>
+
+
+<section id="love-jar">
+    <h2 class="section-title">💖 Reasons Why I Love You 💖</h2>
+
+    <div class="jar-container">
+        <div class="jar">🫙</div>
+
+        <button onclick="showReason()">
+            Pick a Reason ❤️
+        </button>
+
+        <div id="reason-card">
+            <span class="paper-heart top-left">💖</span>
+
+             Click the button to reveal a reason...
+
+            <span class="paper-heart bottom-right">🌸</span>
+        </div>
+    </div>
+</section>
+<section id="thank-you-parents">
+
+    <h2 class="section-title">
+        🌸 To The People Who Made Her 🌸
+    </h2>
+
+    <p class="parents-subtitle">
+        A small thank you from me ❤️
+    </p>
+
+    <div class="parents-container">
+
+        <div class="parents-photo-card">
+            <img src="photos/parents.jpg"
+                 alt="Her Parents"
+                 class="parents-photo">
+        </div>
+
+        <div class="parents-letter">
+
+            <p class="letter-opening">
+                Dear Baba & Kaku,
+            </p>
+
+            <p>
+                I hope when I die I get to tell you this directly,
+                Before I met my favorite person,
+                You are the two people who helped shape her into
+                the amazing woman she is today.
+            </p>
+
+            <p>
+                Thank you for every lesson,
+                every sacrifice,
+                every bit of love,
+                and every value you gave her.
+            </p>
+
+            <p>
+                The kindness, strength, care,
+                and beautiful heart that I admire so much
+                didn't appear by accident.
+            </p>
+
+            <p>
+                Thank you for creating someone who
+                brings so much happiness into my life.
+            </p>
+
+            <p class="letter-signature">
+                With gratitude & love ❤️
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+<section>
+    <h2 class="section-title">A Letter To You 💌</h2>
+
+    <div class="letter">
+        Thank You for being my Best Friend ,For being the person that made me believe that I am someone worthy of being loved ,Thank you for standing by me all these years consistently reassuring me about every thing supporting my every right and wrong decision ,I hope I can always be a person you can rely on during hard times ,I hope I can be a person who would not ruin the few happy moments you have ,There are no limits to what I would be willing to do to make you happy ,I will consistently improve myself so I can treat you better ,You have made me a better person someone that people are willing to be friends with ,I hope you get the most happiness in life and I hope I get to be a part of it ,I love you Siddhi my bestesttttttttttt friendddddddddddddddd
+    </div>
+</section>
+
+<section class="final">
+    <h2 class="final-title">
+And if I had to choose again...
+</h2>
+
+<p class="final-text">
+I'd still choose you.
+Every single time.
+❤️
+</p>
+</section>
+
+<script>
+const text =
+"Every memory with you becomes my favorite memory.";
+
+let i=0;
+
+function typeWriter(){
+    if(i < text.length){
+        document.getElementById("typing").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter,50);
+    }
+}
+typeWriter();
+
+for(let i=0;i<150;i++){
+    let star=document.createElement("div");
+    star.className="star";
+    star.style.left=Math.random()*100+"%";
+    star.style.top=Math.random()*100+"%";
+    star.style.animationDelay=Math.random()*3+"s";
+    document.getElementById("stars").appendChild(star);
+}
+
+
+function surprise(){
+
+    document.getElementById("surprise").style.display="block";
+
+    for(let i=0;i<100;i++){
+
+        let heart=document.createElement("div");
+
+        heart.innerHTML="❤️";
+        heart.className="heart";
+
+        heart.style.left=Math.random()*100+"vw";
+
+        document.body.appendChild(heart);
+
+        setTimeout(()=>{
+            heart.remove();
+        },5000);
+    }
+}
+
+</script>
+
+</body>
+</html>
+```
